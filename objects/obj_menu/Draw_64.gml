@@ -6,7 +6,7 @@ draw_set_valign(1);
 
 
 //laço for pra desenhar os textos
-for (var i = 0; i < 3; i++)
+for (var i = 0; i < array_length(menu); i++)
 {
 	//var pra cor da opção
 	var _cor = c_white;
