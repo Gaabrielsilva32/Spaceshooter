@@ -1,5 +1,5 @@
-//diminuo o timer gradualmente
-timer_tiro--;
+//função atirar
+atirar();
 
 
 //se a não estou em uma seq

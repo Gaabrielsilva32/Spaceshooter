@@ -1,10 +1,9 @@
 //mantendo as seeds aleatórias
 randomize();
-
 #region variaveis
 
 //tempo de espera do tiro
-espera_tiro = random_range(1, 2) * game_get_speed(gamespeed_fps);
+tempo_tiro = random_range(1, 2) * game_get_speed(gamespeed_fps);
 
 //timer do tiro
 timer_tiro = 0;
@@ -19,22 +18,30 @@ inicio_ef_mola();
 
 #region métodos
 
-atirar = function()
+function atirar()
 {
-	//se o timer do tiro for igual a 0
-	if (timer_tiro <= 0)
-	{
-		//crio a instância do tiro
-		instance_create_layer(x, y , "tiro", obj_tiro_inimigo1);
+	
+	//se eu estou na sequencia
+	//if (in_sequence)
+	//{
+		//diminuo o timer gradualmente
+		timer_tiro--;
+	
+		//se o timer do tiro for igual a 0
+		if (timer_tiro <= 0)
+		{
+			//crio a instância do tiro
+			instance_create_layer(x, y , "tiro", obj_tiro_inimigo1);
 		
-		ef_mola(0.9, 1.3);
+			ef_mola(0.9, 1.3);
 		
-		//som do laser
-		efeito_som(sfx_laser2);
+			//som do laser
+			efeito_som(sfx_laser2);
 		
-		//e reseto o timer
-		timer_tiro = espera_tiro;
-	}
+			//e reseto o timer
+			timer_tiro = tempo_tiro;
+		}
+	//}
 }
 
 morrendo = function()

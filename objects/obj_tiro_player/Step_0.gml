@@ -9,4 +9,7 @@ image_xscale = lerp(image_xscale, 1, 0.1);
 image_yscale = lerp(image_yscale, 1, 0.1);
 
 //aumentando a vel do tiro gradualmente
-vspeed = lerp(vspeed, -10, 0.1);
+velv= lerp(velv, -vel, 0.1);
+
+//meu y mais o velv = movimento
+y += velv;

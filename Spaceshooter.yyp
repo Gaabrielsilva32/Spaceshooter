@@ -17,9 +17,9 @@
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"inimigos e player","folderPath":"folders/Objects/inimigos e player.yy","name":"inimigos e player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"menu","folderPath":"folders/Objects/menu.yy","name":"menu","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"power up","folderPath":"folders/Objects/power up.yy","name":"power up","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"outros","folderPath":"folders/Objects/outros.yy","name":"outros","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"particulas","folderPath":"folders/Objects/particulas.yy","name":"particulas","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"power up","folderPath":"folders/Objects/power up.yy","name":"power up","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"tiros","folderPath":"folders/Objects/tiros.yy","name":"tiros","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"tutorial","folderPath":"folders/Objects/tutorial.yy","name":"tutorial","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Particle Systems","folderPath":"folders/Particle Systems.yy","name":"Particle Systems","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -126,9 +126,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_jogo","path":"rooms/rm_jogo/rm_jogo.yy",},},
     {"roomId":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
     {"roomId":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
-    {"roomId":{"name":"rm_jogo","path":"rooms/rm_jogo/rm_jogo.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

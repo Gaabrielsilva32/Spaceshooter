@@ -7,3 +7,6 @@ if (y >= 544)
 	//debug
 	//show_debug_message("a")
 }
+
+//dando vel pro tiro
+y += velv_tiro;

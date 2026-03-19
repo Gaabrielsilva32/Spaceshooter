@@ -82,7 +82,7 @@ maquina_de_estados = function()
 			var _tiro = instance_create_layer(x, y, "tiro", obj_tiro_inimigo3_a);
 			
 			//velocidade pro tiro
-			_tiro.speed = 2;
+			_tiro.velv = 2;
 			
 			//aplicando a dir 
 			_tiro.direction = _dir
@@ -122,7 +122,7 @@ maquina_de_estados = function()
 			var _tiro2 = instance_create_layer(x, y, "tiro", obj_tiro_inimigo3_b);
 			
 			//vel do tiro
-			_tiro2.speed = 4;
+			_tiro2.velv = 4;
 			
 			//direção
 			_tiro2.direction = _ang;
