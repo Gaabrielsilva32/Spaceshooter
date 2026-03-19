@@ -1,6 +1,12 @@
 #region variáveis globais
 global.debug = false;
 
+//a room que vou após a transição
+global.rm_destino = rm_inicio;
+
+//var de controle - transição
+global.transicao = false;
+
 #endregion
 
 #region funções 
@@ -103,3 +109,47 @@ function efeito_som(_sfx = sfx_explosion, _variacao = .1)
 	audio_play_sound(_sfx, 0, 0, , , _pitch);
 }
 #endregion
+
+
+//muda de room de acordo com a transição
+function muda_room_transicao()
+{
+	//a room que eu vou
+	//é a minha rm destino
+	room_goto(global.rm_destino)
+}
+
+function transicao_false()
+{
+	global.transicao = false;
+}
+
+
+//faz o power up sumir dps de um tempo
+function power_up_sumir()
+{
+	
+	//diminuindo o timer gradualmente
+	timer--;
+	
+	//se o timer acabar
+	if (timer <= 0)
+	{
+		//me destruo
+		instance_destroy();
+		
+		//criando a particula do tiro
+		var _part = instance_create_layer(x, y, "tiro", obj_particula_tiro);
+
+		//personalizando a part
+		_part.image_angle = random(359);
+
+		//para de tocar o som do power up sumindo,
+		//pra evitar que um som toque por cima do outro
+		audio_stop_sound(sfx_twoTone);
+
+		//tocando o som quando o player pegar o power up sumindo
+		audio_play_sound(sfx_twoTone, 1, 0);
+	}
+	
+}

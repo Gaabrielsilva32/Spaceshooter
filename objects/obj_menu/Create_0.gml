@@ -49,8 +49,8 @@ function controla_menu()
 	//fazendo a margem sair de 0 até 40
 	margem = lerp(margem, 40, 0.1)
 	
-	//se o player apertou enter
-	if (keyboard_check_pressed(vk_enter))
+	//se o player apertou enter ou espaço
+	if (keyboard_check_pressed(vk_enter) or keyboard_check(vk_space))
 	{
 		ativa_menu();
 	}
@@ -121,7 +121,14 @@ ativa_menu = function()
 		//jogar
 		case 0:
 		{
-		
+			//chama a transição 1 no meio da tela
+			layer_sequence_create("sq_transicao", room_width/2, room_height/2, sq_transicao1);
+			
+			//vou para o jogo
+			global.rm_destino = rm_jogo;
+			
+			//a transição começa
+			global.transicao = true;
 		}
 		
 		break;
@@ -129,7 +136,14 @@ ativa_menu = function()
 		//tutorial
 		case 1:
 		{
-		
+			//chama a transição 1 no meio da tela
+			layer_sequence_create("sq_transicao", room_width/2, room_height/2, sq_transicao1);
+			
+			//vou para o tutorial
+			global.rm_destino = rm_tutorial;
+			
+			//a transição começa
+			global.transicao = true;
 		}
 		
 		break;
@@ -144,4 +158,6 @@ ativa_menu = function()
 		break
 	}
 }
+
+
 #endregion

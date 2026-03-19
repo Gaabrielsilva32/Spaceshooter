@@ -6,6 +6,8 @@ if (global.debug)
 	draw_text(20, 20, "Level do tiro: " + string(level_tiro));
 }
 
+if (global.transicao) exit;
+
 //essa var vai pegar altura da minha viewport
 var _gui_height = display_get_gui_height();
 

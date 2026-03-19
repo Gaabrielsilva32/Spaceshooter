@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.466712,
+  "duration":1.1587756,
   "exportDir":"",
   "name":"sfx_twoTone",
   "parent":{

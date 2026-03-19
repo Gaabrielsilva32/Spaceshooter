@@ -1,6 +1,6 @@
 #region variáveis
 //variável das vidas
-vida = 10;
+vida = 15;
 
 //velocidade
 vel = 2;
@@ -170,6 +170,7 @@ morrendo = function()
 	
 	ef_mola(1.3, 0.9);
 	
+	
 	//se ele ficou sem vida 
 	if (vida < 1)
 	{
@@ -178,6 +179,17 @@ morrendo = function()
 		
 		//som da explosão
 		efeito_som(sfx_explosion)
+		
+		
+		//chance de dropar o power up
+		_chance = random(100);
+	
+		//se chance for maior que 60
+		//(tenho 30% de chance de aparecer o power up)
+		if (_chance > 70)
+		{
+			instance_create_layer(x, y, layer, obj_power_up);
+		}
 		
 		//screenshake
 		screenshake(20);

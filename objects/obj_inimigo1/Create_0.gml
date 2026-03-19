@@ -49,9 +49,9 @@ morrendo = function()
 	
 	//se chance for maior que 60
 	//(tenho 20% de chance de aparecer o power up)
-	if (_chance > 80)
+	if (_chance > 90)
 	{
-		instance_create_layer(x, y, layer, obj_power_up);
+		instance_create_layer(x, y, layer, obj_power_up_vida);
 	}
 	
 	//screenshake

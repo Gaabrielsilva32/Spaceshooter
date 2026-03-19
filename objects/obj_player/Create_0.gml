@@ -61,7 +61,6 @@ function controle_player()
 	{
 		usa_escudo();
 	}
-
 	
 	tenho_escudo();
 	
@@ -208,6 +207,7 @@ function perde_vida()
 	{
 		instance_destroy();
 		
+		
 		//som da explosão
 	//	efeito_som(sfx_explosion);
 		efeito_som(sfx_explosion);
@@ -217,6 +217,11 @@ function perde_vida()
 		
 		//idem
 		screenshake(30);
+		
+		//toca a transição 2
+		layer_sequence_create("sq_transicao", room_width / 2, room_height / 2, sq_transicao1);
+		
+		global.transicao = true;
 	}
 }
 
