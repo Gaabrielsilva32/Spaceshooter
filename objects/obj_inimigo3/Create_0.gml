@@ -81,8 +81,25 @@ maquina_de_estados = function()
 			//criando o tiro
 			var _tiro = instance_create_layer(x, y, "tiro", obj_tiro_inimigo3_a);
 			
-			//velocidade pro tiro
-			_tiro.velv = 2;
+			//salvando a vel padrão do tiro
+			var _vel = 2;
+			
+			
+			//descobrindo a vel que preciso
+			//pro tiro sair no angulo certo
+			
+			//descobrindo a do eixo x
+			var _velh = lengthdir_x(_vel, _dir)
+			
+			//descobrindo a do eixo y
+			var _velv = lengthdir_y(_vel, _dir);
+			
+			//aplicando a vel no tiro
+			//velocidade h do tiro
+			_tiro.velh = _velh;
+			
+			//velocidade v do tiro
+			_tiro.velv = _velv;
 			
 			//aplicando a dir 
 			_tiro.direction = _dir
@@ -119,16 +136,28 @@ maquina_de_estados = function()
 			//repete o tiro 3 vezes
 			repeat(3)
 			{
-			var _tiro2 = instance_create_layer(x, y, "tiro", obj_tiro_inimigo3_b);
+				var _tiro = instance_create_layer(x, y, "tiro", obj_tiro_inimigo3_b);
 			
-			//vel do tiro
-			_tiro2.velv = 4;
+				//salvando a vel do tiro
+				var _vel = _tiro.vel;
 			
-			//direção
-			_tiro2.direction = _ang;
+				//descobrindo a vel certa pra cada angulo 
+				//angulo x
+				var _velh = lengthdir_x(_vel, _ang);
 			
-			//adiconando 15 ao ângulo a cada repetição
-			_ang += 15;
+				//descobrindo a vel certa pro angulo y
+				var _velv = lengthdir_y(_vel, _ang);
+			
+			
+				//passando a vel certa 
+				_tiro.velh = _velh;
+				_tiro.velv = _velv;
+			
+				//direção
+				_tiro.direction = _ang;
+			
+				//adiconando 15 ao ângulo a cada repetição
+				_ang += 15;
 			
 			}
 			
