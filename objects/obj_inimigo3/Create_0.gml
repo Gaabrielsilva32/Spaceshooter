@@ -2,6 +2,12 @@
 //variável das vidas
 vida = 15;
 
+//velocidade horizontal
+velh = 0;
+
+//velocidade vertical
+velv = 0;
+
 //velocidade
 vel = 2;
 
@@ -13,6 +19,9 @@ timer_carregando = game_get_speed(gamespeed_fps) * 2;
 
 //contador de tiros
 contador = 0
+
+//var pra direção da fuga
+dir_fuga = 0;
 
 inicio_ef_mola();
 
@@ -36,7 +45,11 @@ maquina_de_estados = function()
 			//enquanto o y dele for menor que 160
 			if (y < 160)
 			{
-				vspeed = vel;
+				//a minha velocidade vertical recebe o valor da vel
+				velv = vel;
+				
+				//dando velocidade ao inimigo 
+				y += velv;
 			}
 			//senão, show message: "cheguei"
 			else
@@ -51,8 +64,11 @@ maquina_de_estados = function()
 		
 		case "carregando": 
 		{
+			//a velv é zerada 
+			velv = 0;
+			
 			//vou parar 
-			vspeed = 0;
+			y += velv;
 			
 			//ele vai esperar 3 segundos
 			timer_carregando--;
@@ -76,51 +92,54 @@ maquina_de_estados = function()
 			//verificando se o player existe
 			if (instance_exists(obj_player))
 			{
-			var _dir = point_direction(x, y, obj_player.x, obj_player.y);
+				var _dir = point_direction(x, y, obj_player.x, obj_player.y);
 			
-			//criando o tiro
-			var _tiro = instance_create_layer(x, y, "tiro", obj_tiro_inimigo3_a);
+				//criando o tiro
+				var _tiro = instance_create_layer(x, y, "tiro", obj_tiro_inimigo3_a);
 			
-			//salvando a vel padrão do tiro
-			var _vel = 2;
+				//salvando a vel padrão do tiro
+				var _vel = 2;
 			
 			
-			//descobrindo a vel que preciso
-			//pro tiro sair no angulo certo
+				//descobrindo a vel que preciso
+				//pro tiro sair no angulo certo
 			
-			//descobrindo a do eixo x
-			var _velh = lengthdir_x(_vel, _dir)
+				//descobrindo a do eixo x
+				var _velh = lengthdir_x(_vel, _dir)
 			
-			//descobrindo a do eixo y
-			var _velv = lengthdir_y(_vel, _dir);
+				//descobrindo a do eixo y
+				var _velv = lengthdir_y(_vel, _dir);
 			
-			//aplicando a vel no tiro
-			//velocidade h do tiro
-			_tiro.velh = _velh;
+				//aplicando a vel no tiro
+				//velocidade h do tiro
+				_tiro.velh = _velh;
 			
-			//velocidade v do tiro
-			_tiro.velv = _velv;
+				//velocidade v do tiro
+				_tiro.velv = _velv;
 			
-			//aplicando a dir 
-			_tiro.direction = _dir
+				//aplicando a dir 
+				_tiro.direction = _dir
 			
-			//mudando o ângulo do tiro
-			_tiro.image_angle = _dir + 90;
+				//mudando o ângulo do tiro
+				_tiro.image_angle = _dir + 90;
 			
-			//som laser
-			efeito_som(sfx_laser2);
+				//som laser
+				efeito_som(sfx_laser2);
 			
-			contador += 1;
+				contador += 1;
 			
-			//se ainda não passou do 3
-			if (contador < 3)
-			{
-				estado = "carregando";
-			}
-			else
-			{
-				estado = "fugindo";
-			}
+				//se ainda não passou do 3
+				if (contador < 3)
+				{
+					estado = "carregando";
+				}
+				else
+				{
+					estado = "fugindo";
+					
+					//escolhendo a direção
+					dir_fuga = irandom(359);
+				}
 			
 			}
 		}
@@ -174,6 +193,10 @@ maquina_de_estados = function()
 			else
 			{
 				estado = "fugindo";
+				
+				//escolhendo a direção
+				dir_fuga = irandom(359);
+				
 			}
 		}
 		
@@ -181,9 +204,19 @@ maquina_de_estados = function()
 		
 		case "fugindo":
 		{
-			vspeed = - 1;
 			
-			if (y < -32) instance_destroy();
+			velv =  lengthdir_x(vel, dir_fuga);
+			velh =  lengthdir_y(vel, dir_fuga);
+		
+			
+			//eu me movo
+			y += velv;
+			x += velh;
+			
+			//direction = dir_fuga;
+			
+			//se destruindo ao sair da tela
+			if (y < -32 or y > room_height + 32 or x < -32 or x > room_width + 32) instance_destroy();
 		}
 	
 	}	
