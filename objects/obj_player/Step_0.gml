@@ -1,3 +1,7 @@
+//se o hitstop for verdadeiro
+//ele sai do step
+if (global.hitstop) exit;
+
 
 //chamando a função de controle do player
 controle_player();

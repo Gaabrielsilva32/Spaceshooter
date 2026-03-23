@@ -1,3 +1,7 @@
+//se o hitstop for verdadeiro
+//ele sai do step
+if (global.hitstop) exit;
+
 //se o meu tiro sair da tela
 if (y >= 544) 
 {

@@ -1,3 +1,8 @@
+//se o hitstop for verdadeiro
+//ele sai do step
+if (global.hitstop) exit;
+
+
 //função atirar
 atirar();
 
