@@ -228,9 +228,16 @@ morrendo = function()
 	//perder vida
 	vida--;
 	
+	//tempo do efeito branco
 	timer_ef_branco(3);
 	
+	//efeito mola
 	ef_mola(1.3, 0.9);
+	
+	screenshake(1);
+	
+	//efeito de hitstop
+	chama_hitstop(1);
 	
 	
 	//se ele ficou sem vida 

@@ -51,6 +51,10 @@ morrendo = function()
 	
 	efeito_som(sfx_explosion);
 	
+	screenshake(5);
+	
+	chama_hitstop(1);
+	
 	//chance de dropar o power up
 	_chance = random(100);
 	

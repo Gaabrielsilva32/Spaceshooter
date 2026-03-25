@@ -200,6 +200,9 @@ function perde_vida()
 		//som da explosão
 		efeito_som(sfx_explosion);
 		
+		//efeito de hitstop
+		chama_hitstop(10);
+		
 		//reseto o timer
 		timer_invenci = espera_invenci;
 	}
