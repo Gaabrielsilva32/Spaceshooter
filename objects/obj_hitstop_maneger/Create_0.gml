@@ -3,6 +3,9 @@
 timer_hitstop = 0;
 
 
+//detectando os backgrounds
+chama_background();
+
 //metodo para parar o efeito
 function desfaz_hitstop()
 {
