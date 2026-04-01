@@ -4,7 +4,9 @@ timer_hitstop = 0;
 
 
 //detectando os backgrounds
-chama_background();
+var _teste = pega_backgrounds();
+
+show_message(_teste);
 
 //metodo para parar o efeito
 function desfaz_hitstop()

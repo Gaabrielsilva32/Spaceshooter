@@ -22,8 +22,11 @@ function chama_hitstop(_tempo)
 
 
 //função para detectar/checar o background
-function chama_background()
+function pega_backgrounds()
 {
+	
+	var _bgs = [];
+	
 	//var para pegar todas as layers
 	//ele as armazena numa array
 	var _layers = layer_get_all();
@@ -35,7 +38,7 @@ function chama_background()
 	//enquanto i (o indice, que começa do 0)
 	//for menor que _qtd (a quantidade de itens dentro da lista, 
 	// que começa a contar do 1)
-	for (var i = 0; i <= _qtd; i++)
+	for (var i = 0; i < _qtd; i++)
 	{
 		//pegando a layer atual
 		var _atual = _layers[i];
@@ -55,9 +58,19 @@ function chama_background()
 		//ou seja, se for uma camada de Background
 		if (_id_bg != -1)
 		{
+			//se a minha layer for de Bg*
+			//salvando o nome da layer atual 
+			var _nome = layer_get_name(_atual);
 			
+			//mandando o nome pra array de Bg
+			//array push -> pega o array atual e adiciona um item
+			array_push(_bgs, _nome)
 		}
 		
-		
 	}
+	
+	//a função return é usada para dar um retorno pra minha função
+	//ela faz com que a minha função pare.
+	//tudo que vem depois dela, não roda
+	return _bgs;
 }
