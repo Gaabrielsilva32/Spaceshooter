@@ -25,6 +25,7 @@ function chama_hitstop(_tempo)
 function pega_backgrounds()
 {
 	
+	//array
 	var _bgs = [];
 	
 	//var para pegar todas as layers
@@ -73,4 +74,75 @@ function pega_backgrounds()
 	//ela faz com que a minha função pare.
 	//tudo que vem depois dela, não roda
 	return _bgs;
+}
+
+
+//função para travar os bgs
+function trava_backgrounds(_lista_backgrounds)
+{
+	
+	//pegando o tamanho do array
+	var _qtd = array_length(_lista_backgrounds);
+	
+	//usando o laço de repetição for para passar pelos bgs
+	for (var i = 0; i < _qtd; i++)
+	{
+		
+		
+		//verificando a layer atual
+		var _atual = _lista_backgrounds[i];
+		
+		
+		//salvando a hspeed dos bgs numa variavel
+		var _hspeed = layer_get_hspeed(_atual);
+		
+		//salvando a vspeed dos bgs numa varivel
+		var _vspeed = layer_get_vspeed(_atual);
+		
+		//mandando as velocidades certa de cada bg
+		//para a array bgs_hspeed
+		array_push(other.bgs_hspeed, _hspeed);
+		
+		//mandando as velocidades certa de cada bg
+		//para a array bgs_vspeed
+		array_push(other.bgs_vspeed, _vspeed);
+		
+		//parando os bgs
+		layer_hspeed(_atual, 0);
+		
+		//parando os bgs
+		layer_vspeed(_atual, 0);
+	}
+	
+	
+	
+}
+
+
+function destrava_backgrounds(_lista_backgrounds, _bgs_hspeed, _bgs_vspeed)
+{
+
+	//pegando o tamanho do array
+	var _qtd = array_length(_lista_backgrounds);
+	
+	
+	for (var i = 0; i < _qtd; i++)
+	{
+		//verificando a layer atual
+		var _atual	= _lista_backgrounds[i]
+		
+		var _hspeed	=  _bgs_hspeed[i];
+		
+		var _vspeed	= _bgs_vspeed[i];
+		
+		//definindo a hspeed do bg atual
+		layer_hspeed(_atual, _hspeed);
+		
+		//definindo a vspeed do bg atual
+		layer_vspeed(_atual, _vspeed);
+		
+	}
+	
+	
+	
 }

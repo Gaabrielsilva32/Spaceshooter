@@ -8,5 +8,7 @@ if (keyboard_check_pressed(vk_shift))
 	
 	//por um segundo
 	timer_hitstop = 60;
+	
+	trava_backgrounds(lista_backgrounds);
 }
 

@@ -4,9 +4,14 @@ timer_hitstop = 0;
 
 
 //detectando os backgrounds
-var _teste = pega_backgrounds();
+lista_backgrounds = pega_backgrounds();
 
-show_message(_teste);
+//pegando a velh dos bgs
+bgs_hspeed = [];
+
+//pegando a velv dos bgs
+bgs_vspeed = [];
+
 
 //metodo para parar o efeito
 function desfaz_hitstop()
@@ -26,6 +31,8 @@ function desfaz_hitstop()
 			image_speed = 0;
 		}
 		
+		trava_backgrounds(lista_backgrounds);
+		
 		
 		//se o timer chegar a zero
 		if (timer_hitstop <= 0)
@@ -33,7 +40,10 @@ function desfaz_hitstop()
 			//desativo o efeito
 			global.hitstop = false;
 			
-				//fazendo as animações voltarem
+			//a vel dos bgs voltam
+			destrava_backgrounds(lista_backgrounds, bgs_hspeed, bgs_vspeed);
+			
+			//fazendo as animações voltarem
 			with(all)
 			{
 				image_speed = 1;
