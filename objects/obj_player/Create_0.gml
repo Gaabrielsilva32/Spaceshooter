@@ -95,7 +95,7 @@ function controle_player()
 	//zerando o timer da invencibilidade gradualmente
 	timer_invenci--;
 	
-	if (timer_invenci > 0)
+	if (timer_invenci > 0 && !meu_escudo)
 	{
 		//fica alternado entre false e true
 		//fica piscando
