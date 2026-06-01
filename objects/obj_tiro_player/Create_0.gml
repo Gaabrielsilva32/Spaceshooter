@@ -6,4 +6,4 @@ image_yscale = 2.5;
 velv = 0;
 
 //vel do tiro
-vel = 10;
+vel = -10;
