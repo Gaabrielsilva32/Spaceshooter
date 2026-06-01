@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_part_manager",
+  "%Name":"obj_particula_tiro2",
   "eventList":[],
   "managed":true,
-  "name":"obj_part_manager",
+  "name":"obj_particula_tiro2",
   "overriddenProperties":[],
   "parent":{
     "name":"objetos",
@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_part_linha",
+    "path":"sprites/spr_part_linha/spr_part_linha.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

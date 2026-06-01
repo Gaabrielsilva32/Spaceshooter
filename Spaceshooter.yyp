@@ -76,6 +76,7 @@
     {"id":{"name":"obj_part_explosao_player","path":"objects/obj_part_explosao_player/obj_part_explosao_player.yy",},},
     {"id":{"name":"obj_part_manager","path":"objects/obj_part_manager/obj_part_manager.yy",},},
     {"id":{"name":"obj_particula_tiro","path":"objects/obj_particula_tiro/obj_particula_tiro.yy",},},
+    {"id":{"name":"obj_particula_tiro2","path":"objects/obj_particula_tiro2/obj_particula_tiro2.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_power_up_vida","path":"objects/obj_power_up_vida/obj_power_up_vida.yy",},},
     {"id":{"name":"obj_power_up","path":"objects/obj_power_up/obj_power_up.yy",},},

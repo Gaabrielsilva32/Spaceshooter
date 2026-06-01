@@ -1,6 +1,8 @@
 //chama a part do tiro
 instance_create_layer(x, y, "particulas", obj_particula_tiro);
 
+cria_particulas(x, y);
+
 //se o tiro não saiu da room
 if (y > 0)
 {
