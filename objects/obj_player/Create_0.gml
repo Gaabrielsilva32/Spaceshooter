@@ -32,6 +32,8 @@ espera_invenci = 60;
 //timer de invencibilidade
 timer_invenci = 0;
 
+mostrar = true;
+
 inicia_ef_branco();
 
 //iniciando o efeito mola
@@ -92,6 +94,19 @@ function controle_player()
 	
 	//zerando o timer da invencibilidade gradualmente
 	timer_invenci--;
+	
+	if (timer_invenci > 0)
+	{
+		//fica alternado entre false e true
+		//fica piscando
+		mostrar = !mostrar
+	}
+	else
+	{
+		//garante que ao terminar o timer do invensivel
+		//ele termine em true
+		mostrar = true;
+	}
 	
 	//se eu apertar o botão de atirar e o timer do tiro estiver em 0
 	if (_atirar && timer_tiro <= 0)
