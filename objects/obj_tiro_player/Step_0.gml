@@ -13,3 +13,7 @@ velv= lerp(velv, -vel, 0.1);
 
 //meu y mais o velv = movimento
 y += velv;
+
+
+//criando o rastro do tiro
+var _rastro = instance_create_depth(x, y, depth, obj_rastro_tiro);

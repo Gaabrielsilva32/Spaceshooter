@@ -122,9 +122,13 @@ function controle_player()
 //método do tiro 1
 function tiro_1()
 {
+	
+	//var pra deixar a origem do tiro aletória
+	var random_x = random_range(-10, 10);
+	
 	//crio uma instancia do tiro na minha posição
 	//e armazenado isso na minha var tiro
-	var _tiro = instance_create_layer(x, y, "tiro", obj_tiro_player);
+	var _tiro = instance_create_layer(x + random_x, y, "tiro", obj_tiro_player);
 	
 	//definindo a vel dos tiros
 	//_tiro.vspeed -= 10;
@@ -133,11 +137,14 @@ function tiro_1()
 //criando método do tiro 2
 function tiro_2()
 {
+	//var pra deixar a origem do tiro aletória
+	var random_x = random_range(-10, 10);
+	
 	//criando o primeiro tiro
-	var _tiro = instance_create_layer(x - 10, y, "tiro", obj_tiro_player);
+	var _tiro = instance_create_layer(x - 10 + random_x, y, "tiro", obj_tiro_player);
 	
 	//criando o segundo tiro
-	var _tiro2 = instance_create_layer(x + 10, y, "tiro", obj_tiro_player);
+	var _tiro2 = instance_create_layer(x + 10 + random_x, y, "tiro", obj_tiro_player);
 		
 	//definido a vel dos tiros
 	//_tiro.vspeed -= 10;
