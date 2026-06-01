@@ -210,6 +210,10 @@ function perde_vida()
 		//efeito de hitstop
 		chama_hitstop(10);
 		
+		_cor = $999999;
+		
+		ativa_flash(_cor);
+		
 		//reseto o timer
 		timer_invenci = espera_invenci;
 	}
@@ -217,6 +221,7 @@ function perde_vida()
 	{
 		instance_destroy();
 		
+		ativa_flash(c_red);
 		
 		//som da explosão
 	//	efeito_som(sfx_explosion);
