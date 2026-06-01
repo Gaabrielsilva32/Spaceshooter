@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"script_particulas",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"script_particulas",
+  "parent":{
+    "name":"scripts",
+    "path":"folders/Efeitos/Particulas/scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
