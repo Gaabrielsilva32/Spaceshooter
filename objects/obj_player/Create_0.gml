@@ -51,6 +51,8 @@ function controle_player()
 	//salvando em variáveis
 	var _cima, _baixo, _esq, _dire, _atirar;
 	
+	//show_debug_overlay(1);
+	
 	_cima	= keyboard_check(ord("W")) or keyboard_check(vk_up);
 	_baixo	= keyboard_check(ord("S"))or keyboard_check(vk_down);
 	_dire	= keyboard_check(ord("D"))or keyboard_check(vk_right);

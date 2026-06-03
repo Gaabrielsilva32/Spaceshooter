@@ -7,3 +7,6 @@ velv = 0;
 
 //vel do tiro
 vel = -10;
+
+//cor do rastro
+cor = c_purple;
