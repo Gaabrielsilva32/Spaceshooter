@@ -1,6 +1,6 @@
 
 
-function cria_particulas(_x = 0, _y = 0, _velh = 0, _velv = 0)
+function cria_particulas(_vida_min = 30, _vida_max = 60, _x = 0, _y = 0, _velh = 0, _velv = 0)
 {
 	//se o obj não existe, eu crio ele
 	if (!instance_exists(obj_part_manager)) instance_create_depth(0, 0, 0, obj_part_manager);
@@ -32,13 +32,14 @@ function cria_particulas(_x = 0, _y = 0, _velh = 0, _velv = 0)
 			_part.velh = lengthdir_x(_vel, _dir_part);
 			_part.velv = lengthdir_y(_vel, _dir_part);
 			
-			_part.image_xscale = _tam;
-			_part.image_yscale = _tam;
+			_part.image_xscale	= _tam;
+			_part.image_yscale	= _tam;
+			_part.image_angle	= _dir_part;
 			
-			_part.image_angle = _dir_part;
+			var _vida = random_range(60, 120);
 			
-			
+			_part.vida_max		= _vida;
+			_part.vida_atual	= _vida;
 		}
 	}
-	
 }
