@@ -29,8 +29,8 @@ function cria_particulas(_vida_min = 30, _vida_max = 60, _x = 0, _y = 0, _velh =
 			
 			
 			//descobrindo a velocidade necesaria para ir na direção correta
-			_part.velh = lengthdir_x(_vel, _dir_part);
-			_part.velv = lengthdir_y(_vel, _dir_part);
+			_part.velh_original = lengthdir_x(_vel, _dir_part);
+			_part.velv_original = lengthdir_y(_vel, _dir_part);
 			
 			_part.image_xscale	= _tam;
 			_part.image_yscale	= _tam;
