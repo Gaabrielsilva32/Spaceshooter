@@ -12,3 +12,5 @@ vel = 4;
 
 //a vel v tem o mesmo valor da vel do tiro
 velv = vel;
+
+cor = c_red;
