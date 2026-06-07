@@ -11,7 +11,7 @@ vel = 2;
 //tempo de espera do tiro
 espera_tiro = 10;
 
-//timer do tiro
+//timer do tiro 
 timer_tiro = 0;
 
 //criando a var do livel do tiro
