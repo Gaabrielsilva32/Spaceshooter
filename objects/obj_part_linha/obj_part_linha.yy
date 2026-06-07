@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"objetos",
-    "path":"folders/Efeitos/Particulas/objetos.yy",
+    "path":"folders/Efeitos_legais/Particulas/objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"sprites",
-    "path":"folders/Efeitos/Damage_flash/sprites.yy",
+    "path":"folders/Efeitos_legais/Damage_flash/sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -6,7 +6,7 @@
   "name":"script_damage_flash",
   "parent":{
     "name":"script",
-    "path":"folders/Efeitos/Damage_flash/script.yy",
+    "path":"folders/Efeitos_legais/Damage_flash/script.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

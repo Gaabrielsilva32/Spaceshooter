@@ -6,7 +6,7 @@
   "name":"script_particulas",
   "parent":{
     "name":"scripts",
-    "path":"folders/Efeitos/Particulas/scripts.yy",
+    "path":"folders/Efeitos_legais/Particulas/scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

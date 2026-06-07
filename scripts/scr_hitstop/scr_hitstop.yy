@@ -6,7 +6,7 @@
   "name":"scr_hitstop",
   "parent":{
     "name":"Scripts_hitstop",
-    "path":"folders/Efeitos/Hitstop/Scripts_hitstop.yy",
+    "path":"folders/Efeitos_legais/Hitstop/Scripts_hitstop.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

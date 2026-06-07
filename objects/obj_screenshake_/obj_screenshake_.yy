@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_flash",
+  "%Name":"obj_screenshake_",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_flash",
+  "name":"obj_screenshake_",
   "overriddenProperties":[],
   "parent":{
-    "name":"objetos",
-    "path":"folders/Efeitos_legais/Damage_flash/objetos.yy",
+    "name":"obj_screenshake",
+    "path":"folders/Efeitos_legais/Screenshake/obj_screenshake.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_flash",
-    "path":"sprites/spr_flash/spr_flash.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
