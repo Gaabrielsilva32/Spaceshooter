@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"script_damage_flash",
+  "%Name":"scr_efeito_som",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"script_damage_flash",
+  "name":"scr_efeito_som",
   "parent":{
-    "name":"script",
-    "path":"folders/Efeitos2/Damage_flash/script.yy",
+    "name":"Efeito_som",
+    "path":"folders/Efeitos2/Efeito_som.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

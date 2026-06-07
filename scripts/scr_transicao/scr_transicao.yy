@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"script_damage_flash",
+  "%Name":"scr_transicao",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"script_damage_flash",
+  "name":"scr_transicao",
   "parent":{
-    "name":"script",
-    "path":"folders/Efeitos2/Damage_flash/script.yy",
+    "name":"Transicao",
+    "path":"folders/Efeitos2/Transicao.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

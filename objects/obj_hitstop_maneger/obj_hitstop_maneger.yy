@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos_hitstop",
-    "path":"folders/Efeitos_legais/Hitstop/Objetos_hitstop.yy",
+    "path":"folders/Efeitos2/Hitstop/Objetos_hitstop.yy",
   },
   "parentObjectId":null,
   "persistent":false,

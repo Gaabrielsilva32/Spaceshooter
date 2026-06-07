@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"objetos",
-    "path":"folders/Efeitos_legais/Damage_flash/objetos.yy",
+    "path":"folders/Efeitos2/Damage_flash/objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

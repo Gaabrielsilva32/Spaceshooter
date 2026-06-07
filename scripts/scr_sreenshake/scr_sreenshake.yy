@@ -6,7 +6,7 @@
   "name":"scr_sreenshake",
   "parent":{
     "name":"scr_sreenshake",
-    "path":"folders/Efeitos_legais/Screenshake/scr_sreenshake.yy",
+    "path":"folders/Efeitos2/Screenshake/scr_sreenshake.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

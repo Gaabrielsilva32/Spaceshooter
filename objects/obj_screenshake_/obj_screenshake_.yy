@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"obj_screenshake",
-    "path":"folders/Efeitos_legais/Screenshake/obj_screenshake.yy",
+    "path":"folders/Efeitos2/Screenshake/obj_screenshake.yy",
   },
   "parentObjectId":null,
   "persistent":false,

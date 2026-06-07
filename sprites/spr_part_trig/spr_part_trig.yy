@@ -26,7 +26,7 @@
   "origin":5,
   "parent":{
     "name":"sprites",
-    "path":"folders/Efeitos_legais/Particulas/sprites.yy",
+    "path":"folders/Efeitos2/Particulas/sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

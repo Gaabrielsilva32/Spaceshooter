@@ -24,3 +24,7 @@ function desenhando_ef_mola()
 	//me desenhando
 	draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, image_angle, image_blend, image_alpha);
 }
+
+
+//colocar no draw
+//if (mostrar) desenha_efeito_branco(desenhando_ef_mola);

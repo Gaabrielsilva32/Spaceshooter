@@ -6,7 +6,7 @@
   "name":"scr_efeito_mola",
   "parent":{
     "name":"scr_efeito_mola",
-    "path":"folders/Efeitos_legais/Efeito_mola/scr_efeito_mola.yy",
+    "path":"folders/Efeitos2/Efeito_mola/scr_efeito_mola.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
